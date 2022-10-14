@@ -112,14 +112,6 @@ if __name__ == "__main__":
 
     running = True
     while running:
-        nodes = Graph()
-        nodes.add_node("Hello")
-        nodes.add_node(True)
-        nodes.add_node("c", 0)
-        nodes.add_node(3123123, 0, 1)
-        nodes.add_node((1, 2, 3), 1, 2)
-        nodes.add_node([5, 2, 3], 3)
-        nodes.add_node({6: 1}, 5)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
