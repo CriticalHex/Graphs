@@ -55,7 +55,7 @@ class Graph:
 
         def draw_lines(self, screen):
             for c in self.connected:
-                pygame.draw.line(screen, WHITE, (self.x, self.y), (c.x, c.y))
+                pygame.draw.aaline(screen, WHITE, (self.x, self.y), (c.x, c.y))
 
     def __init__(self, *nodes) -> None:
         self.nodes: list[Graph.Node] = []
