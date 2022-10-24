@@ -77,6 +77,12 @@ class Graph:
             nodes.append(self.nodes[i])
         self.nodes.append(Graph.Node(val, *self.r_node(), *nodes))
 
+    def add_positional_node(self, val=None, x: int = 0, y: int = 0, *linked_indexes):
+        nodes = []
+        for i in linked_indexes:
+            nodes.append(self.nodes[i])
+        self.nodes.append(Graph.Node(val, x, y, self.r_color(), *nodes))
+
     def print_connections(self):
         for n in self.nodes:
             n.print_connections()
